@@ -12,7 +12,7 @@ const ContactList = ({ contacts, deleteContact }) => {
   return (
     <div>
       <UsersContactList>
-        {contacts.map((contact) => (
+        {contacts?.map((contact) => (
           <ContactListItem key={contact.id}>
             <UserName>{contact.name}</UserName>
             <UserNumber>{contact.number}</UserNumber>
