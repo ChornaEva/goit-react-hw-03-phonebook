@@ -25,10 +25,9 @@ class ContactForm extends Component {
     event.preventDefault();
 
     // проверяем наличие имени которое записывается и которое уже есть в списке контактов
-    // нет-записываем
-    // есть-алерт
+    // нет-записываем,есть-алерт
     if (
-      this.props.contacts.find((contact) => contact.name === this.state.name)
+      this.props.contacts?.find((contact) => contact.name === this.state.name)
     ) {
       alert(`${this.state.name} is already in contacts`);
     } else {
