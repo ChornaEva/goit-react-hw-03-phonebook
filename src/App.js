@@ -26,8 +26,6 @@ class App extends Component {
   // сравнение нового контакта с имеющимся, запись нового в локал
   componentDidUpdate(prevProps, prevState) {
     if (this.state.contacts !== prevState.contacts) {
-      console.log(prevState.contacts);
-
       localStorage.setItem("contacts", JSON.stringify(this.state.contacts));
     }
   }
